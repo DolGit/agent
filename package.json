@@ -1,0 +1,55 @@
+{
+  "name": "@dolnpm/agent",
+  "version": "0.1.8-development",
+  "description": "Built on top of superagent and adds like one feature",
+  "browser": "lib/index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "prepublishOnly": "npm run build",
+    "start": "nwb serve-react-demo",
+    "test": "jest",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+  },
+  "peerDependencies": {
+    "superagent": "*",
+    "superagent-promise": "*"
+  },
+  "devDependencies": {
+    "babel-core": "^6.0.14",
+    "babel-loader": "^7.1.5",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "nwb": "0.23.x",
+    "semantic-release": "^15.13.2",
+    "travis-deploy-once": "^5.0.11",
+    "babel-jest": "26.0.1"
+  },
+  "author": "Alex Dollery (DolNpm/DolGit)",
+  "homepage": "https://github.com/DolGit/agent#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DolGit/agent.git"
+  },
+  "dependencies": {
+    "superagent-promise": "^1.1.0",
+    "superagent": "^4.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/DolGit/agent/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  }
+}
